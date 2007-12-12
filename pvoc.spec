@@ -1,6 +1,6 @@
 %define name    pvoc
 %define version 0.1.9
-%define release 2mdk
+%define release %mkrel 2
 
 Summary:      	LADSPA plugins for time compression/expansion of sound data
 Name:         	%{name}
