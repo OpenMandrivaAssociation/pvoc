@@ -11,7 +11,7 @@ Group:        	Sound
 URL:          	http://quitte.de/dsp/pvoc.html
 Source0:      	pvoc_%{version}.tar.bz2
 
-BuildRequires:	pkgconfig libfftw3-devel ladspa-devel libsndfile-devel
+BuildRequires:	pkgconfig fftw3-devel ladspa-devel libsndfile-devel
 
 %description
 pvoc is a collection of LADSPA units and a command line tool for time
