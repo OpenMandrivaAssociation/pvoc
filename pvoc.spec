@@ -10,6 +10,7 @@ License:    	GPL
 Group:        	Sound
 URL:          	http://quitte.de/dsp/pvoc.html
 Source0:      	pvoc_%{version}.tar.bz2
+BuildRoot:    	%{_tmppath}/%{name}-buildroot
 
 BuildRequires:	pkgconfig fftw3-devel ladspa-devel libsndfile-devel
 
