@@ -20,11 +20,11 @@ technique
 %setup -q 
 
 %build
-make PREFIX=%{_prefix} MAN1DEST=%{_mandir}/man1
+make PREFIX=%{_prefix} MAN1DEST=%{_mandir}/man1 PLUGDEST=%{_libdir}/ladspa
 
 %install
 rm -rf %{buildroot}
-make PREFIX=%{buildroot}%{_prefix} MAN1DEST=%{buildroot}%{_mandir}/man1 install
+make PREFIX=%{buildroot}%{_prefix} MAN1DEST=%{buildroot}%{_mandir}/man1 PLUGDEST=%{buildroot}%{_libdir}/ladspa install
 
 %clean
 rm -rf %{buildroot}
