@@ -1,7 +1,7 @@
 Summary:	LADSPA plugins for time compression/expansion of sound data
 Name:		pvoc
 Version:	0.1.12
-Release:	%{mkrel 1}
+Release:	%{mkrel 2}
 License:	GPLv2+
 Group:		Sound
 URL:		http://quitte.de/dsp/pvoc.html
