@@ -1,18 +1,15 @@
-%define name    pvoc
-%define version 0.1.9
-%define release %mkrel 3
-
-Summary:      	LADSPA plugins for time compression/expansion of sound data
-Name:         	%{name}
-Version:      	%{version}
-Release:      	%{release}
-License:    	GPL
-Group:        	Sound
-URL:          	http://quitte.de/dsp/pvoc.html
-Source0:      	pvoc_%{version}.tar.bz2
-BuildRoot:    	%{_tmppath}/%{name}-buildroot
-
-BuildRequires:	pkgconfig fftw3-devel ladspa-devel libsndfile-devel
+Summary:	LADSPA plugins for time compression/expansion of sound data
+Name:		pvoc
+Version:	0.1.12
+Release:	%{mkrel 1}
+License:	GPLv2+
+Group:		Sound
+URL:		http://quitte.de/dsp/pvoc.html
+Source0:	http://quitte.de/dsp/%{name}_%{version}.tar.gz
+BuildRoot:	%{_tmppath}/%{name}-buildroot
+BuildRequires:	fftw3-devel
+BuildRequires:	ladspa-devel
+BuildRequires:	libsndfile-devel
 
 %description
 pvoc is a collection of LADSPA units and a command line tool for time
@@ -26,11 +23,11 @@ technique
 make PREFIX=%{_prefix} MAN1DEST=%{_mandir}/man1
 
 %install
-rm -rf $RPM_BUILD_ROOT
-make PREFIX=$RPM_BUILD_ROOT%{_prefix} MAN1DEST=$RPM_BUILD_ROOT%{_mandir}/man1 install
+rm -rf %{buildroot}
+make PREFIX=%{buildroot}%{_prefix} MAN1DEST=%{buildroot}%{_mandir}/man1 install
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
