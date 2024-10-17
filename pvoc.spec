@@ -6,7 +6,7 @@ Version:	0.1.12
 Release:	6
 License:	GPLv2+
 Group:		Sound
-URL:		http://quitte.de/dsp/pvoc.html
+URL:		https://quitte.de/dsp/pvoc.html
 Source0:	http://quitte.de/dsp/%{name}_%{version}.tar.gz
 BuildRequires:	fftw3-devel
 BuildRequires:	ladspa-devel
