@@ -8,6 +8,7 @@ License:	GPLv2+
 Group:		Sound
 URL:		https://quitte.de/dsp/pvoc.html
 Source0:	http://quitte.de/dsp/%{name}_%{version}.tar.gz
+BuildRequires:	make
 BuildRequires:	fftw3-devel
 BuildRequires:	ladspa-devel
 BuildRequires:	pkgconfig(sndfile)
